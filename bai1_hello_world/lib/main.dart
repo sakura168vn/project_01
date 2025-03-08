@@ -1,5 +1,65 @@
 import 'package:flutter/material.dart';
 
+//Trong flutter sẽ quản lý qua các widget
+
+void main() {
+  runApp(const MyApp());
+}
+
+//Chữ viết tắt st chọn flutter stateles Widget
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    //Xây dựng một khung cho App
+    return MaterialApp(
+      title: 'Tiêu đề web',
+      theme: ThemeData(primarySwatch: Colors.deepOrange),
+      home: const MyHomePage(), //Khai báo trang đầu tiên
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.yellow,
+        title: const Text(
+          "Home Page",
+          style: TextStyle(
+            color: Color.fromARGB(255, 48, 195, 102),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      body: const Center(
+        child: Text(
+          "Hello World",
+          style: TextStyle(
+            color: Colors.blue,
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+            backgroundColor: Colors.black,
+          ),
+        ),
+      ),
+    ); //Thanh appbar
+  }
+}
+
+/*
+import 'package:flutter/material.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -120,3 +180,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
