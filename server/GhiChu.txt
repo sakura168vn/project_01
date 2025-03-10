@@ -1,0 +1,4 @@
+npm init
+npm install nodemon --save
+npm install socket.io@2.3
+npm instal express --save

@@ -23,14 +23,12 @@ class myHomePage extends StatefulWidget {
 class _myHomePageState extends State<myHomePage> {
   int _counter = 0;
   void countUp() {
-    print("Mỗi lần ấn bạn sẽ tăng");
     setState(() {
       _counter++;
     });
   }
 
   void countDown() {
-    print("Mỗi lần ấn bạn sẽ giảm");
     setState(() {
       _counter--;
     });
